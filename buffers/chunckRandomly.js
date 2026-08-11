@@ -5,7 +5,7 @@
  * @returns {Array<Buffer>}
  */
 
-function chunkRandomly(payload){
+export function chunkRandomly(payload){
     let acc = 0
     if(!payload.length) return []
 
@@ -29,6 +29,6 @@ function runTest(name, payload) {
     console.log({ name, matchesOriginal, noEmptyChunks, chunkCount: chunks.length });
 }
 
-runTest("empty payload", Buffer.from(''));
-runTest("single byte payload", Buffer.from('a'));
-runTest("two byte payload", Buffer.from('ab'));
+// runTest("empty payload", Buffer.from(''));
+// runTest("single byte payload", Buffer.from('a'));
+// runTest("two byte payload", Buffer.from('ab'));
